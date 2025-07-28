@@ -41,6 +41,8 @@ jobs:
         run: npm ci
       - name: Build
         run: TZ=Asia/Taipei npm run build
+      - name: Destroy my SEO?
+        run: cp -v robots.txt ./public/robots.txt
       - name: Change CNAME
         run: |
           echo "${CNAME_tw}" | tee ./public/CNAME
