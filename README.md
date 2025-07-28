@@ -1,5 +1,9 @@
 # Sean's Blog
 
+News: Migrating to Somewhere, try using Hugo, new place: <https://blog.clam.tw>
+
+---
+
 less is more, old is new.
 
 ## Note
