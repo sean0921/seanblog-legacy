@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Build
         run: TZ=Asia/Taipei npm run build
       - name: Change CNAME
