@@ -47,7 +47,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.TOKEN_JULY_25 }}
           external_repository: sean0921/${{ env.CNAME_tw }}
           publish_branch: master
           publish_dir: ./public
@@ -59,7 +59,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.TOKEN_JULY_25 }}
           external_repository: sean0921/${{ env.CNAME_moe }}
           publish_branch: master
           publish_dir: ./public
