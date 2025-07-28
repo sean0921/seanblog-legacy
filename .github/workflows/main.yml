@@ -44,26 +44,24 @@ jobs:
       - name: Change CNAME
         run: |
           echo "${CNAME_tw}" | tee ./public/CNAME
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          source-directory: 'public'
-          destination-github-username: 'sean0921'
-          destination-repository-name: ${{ env.CNAME_tw }}
-          user-email: sean.li.shin.ho@gmail.com
-          target-branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: sean0921/${{ env.CNAME_tw }}
+          publish_branch: master
+          publish_dir: ./public
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
       - name: Change CNAME
         run: |
           echo "${CNAME_moe}" | tee ./public/CNAME
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          source-directory: 'public'
-          destination-github-username: 'sean0921'
-          destination-repository-name: ${{ env.CNAME_moe }}
-          user-email: sean.li.shin.ho@gmail.com
-          target-branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: sean0921/${{ env.CNAME_moe }}
+          publish_branch: master
+          publish_dir: ./public
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
