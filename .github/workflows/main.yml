@@ -11,8 +11,8 @@ jobs:
       contents: read
       deployments: write
     env:
-      CNAME_tw: blog.clam.tw
-      CNAME_moe: blog.clam.moe
+      CNAME_tw: blog-legacy.clam.tw
+      CNAME_moe: blog-legacy.clam.moe
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,12 +41,6 @@ jobs:
         run: npm install
       - name: Build
         run: TZ=Asia/Taipei npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages  # deploying branch
       - name: Change CNAME
         run: |
           echo "${CNAME_tw}" | tee ./public/CNAME

@@ -5,7 +5,7 @@
 # Site
 title: Sean's Blog
 subtitle: 'less is more, old is new.'
-description: 'New Blog site construted by Hexo (nodejs package)'
+description: 'Legacy Blog site construted by Hexo'
 keywords: Sean
 author: Sean Ho
 language: 
@@ -15,7 +15,7 @@ timezone: 'Asia/Taipei'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://blog.clam.ml
+url: https://blog-legacy.clam.tw
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
